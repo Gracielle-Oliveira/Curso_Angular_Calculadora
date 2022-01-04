@@ -13,35 +13,35 @@ describe('ServicoCalcService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('deve garantir que 1 + 4 = 5', 
+  it('should ensure that 1 + 4 = 5', 
     inject([ServicoCalcService], (service: ServicoCalcService) => {
       let soma = service.calcular(1, 4, ServicoCalcService.SOMA);
       expect(soma).toEqual(5);
     })
   );
 
-  it('deve garantir que 1 - 4 = -3', 
+  it('should ensure that 1 - 4 = -3', 
   inject([ServicoCalcService], (service: ServicoCalcService) => {
     let subtracao = service.calcular(1, 4, ServicoCalcService.SUBTRACAO);
     expect(subtracao).toEqual(-3);
   })
 );
 
-it('deve garantir que 1 / 4 = 0.25', 
+it('should ensure that 1 / 4 = 0.25', 
   inject([ServicoCalcService], (service: ServicoCalcService) => {
     let divisao = service.calcular(1, 4, ServicoCalcService.DIVISAO);
     expect(divisao).toEqual(0.25);
   })
 );
 
-it('deve garantir que 1 * 4 = 4', 
+it('should ensure that 1 * 4 = 4', 
   inject([ServicoCalcService], (service: ServicoCalcService) => {
     let multiplicacao = service.calcular(1, 4, ServicoCalcService.MULTIPLICACAO);
     expect(multiplicacao).toEqual(4);
   })
 );
 
-it('deve retornar 0 para operação inválida', 
+it('should return 0 to invalid operation', 
     inject([ServicoCalcService], (service: ServicoCalcService) => {
       let operacaoInvalida = service.calcular(1, 4, '%');
       expect(operacaoInvalida).toEqual(0);
